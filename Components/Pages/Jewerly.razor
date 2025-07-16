@@ -1,0 +1,102 @@
+﻿@page "/jewerly"
+@rendermode InteractiveServer
+<h3>Ювелірні магазинизи за адресою: </h3>
+
+@code {
+    private List<JewelryStore> stores;
+    private string newStoreAddress;
+
+    private List<Jewelry> sortedJewelryList;
+    private List<string> metalCount;
+
+    protected override void OnInitialized()
+    {
+        stores = JewelryStoreRepository.ReadStoresFromFile("input.txt");
+        // ShowSortedJewelry();
+    }
+
+    // private void AddStore()
+    // {
+    //     if (!string.IsNullOrWhiteSpace(newStoreAddress))
+    //     {
+    //         stores.Add(new JewelryStore { Address = newStoreAddress });
+    //         newStoreAddress = string.Empty;
+    //     }
+    // }
+
+    // private void WriteUniqueMetalsHandler()
+    // {
+    //     JewelryStoreRepository.WriteUniqueMetals(stores, "metals.txt");
+    // }
+
+    private void ShowSortedJewelry()
+    {
+        sortedJewelryList = stores
+            .Where(s => s.TotalPrice <= 4000)
+            .SelectMany(s => s.JewelryList)
+            .OrderBy(j => j.Name)
+            .ToList();
+    }
+
+    private void WriteUniqueMetals()
+    {
+        metalCount = stores
+            .SelectMany(s => s.JewelryList)
+            .GroupBy(j => j.Metal)
+            .Select(g => $"{g.Key}: {g.Count()}")
+            .ToList();
+
+        // File.WriteAllLines(outputFile, metalCount);
+    }
+
+}
+
+@if (stores == null)
+{
+    <p>Дані не завантажено</p>
+}
+else
+{
+                <p>Ювелірні магазинизи за адресою: </p>
+    <ul>
+        @foreach (var store in stores)
+        {
+            <li>
+                <b> @store.Address</b>(сума виробів: @store.TotalPrice)
+                <ul>
+                    @foreach (var jewel in store.JewelryList)
+                    {
+                        <li>@jewel.Name, @jewel.Metal, @jewel.Weight г, @jewel.Price ₴</li>
+                    }
+                </ul>
+            </li>
+        }
+    </ul>
+}
+
+
+<button @onclick="ShowSortedJewelry">Показати посортовані прикраси</button>
+
+@if (sortedJewelryList != null)
+{
+    <p>Знайдено виробів: @sortedJewelryList.Count</p>
+    <ul>
+        @foreach (var item in sortedJewelryList)
+        {
+            <li>@item.Name, @item.Metal, @item.Weight г, @item.Price ₴</li>
+        }
+    </ul>
+}
+
+<button @onclick="WriteUniqueMetals">Показати унікальні прикраси</button>
+
+@if (metalCount != null)
+{
+    <p>Знайдено виробів: @metalCount.Count</p>
+    <ul>
+        @foreach (var item in metalCount)
+        {
+            <li>@item</li>
+        }
+    </ul>
+}
