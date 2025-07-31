@@ -28,7 +28,12 @@ namespace Jewelry_Blazor_App
             store4.JewelryList.Add(new Jewelry { Name = "Ланцюжок", Metal = "Титан", Weight = 4.2, Price = 2600 });
             store4.JewelryList.Add(new Jewelry { Name = "Каблучка", Metal = "Золото", Weight = 2.2, Price = 3700 });
 
-            db.Stores.AddRange(store1, store2, store3, store4);
+            var store5 = new JewelryStore { Address = "Тернопіль, вул. Стадникової, 19" };
+            store5.JewelryList.Add(new Jewelry { Name = "Каблучка", Metal = "Срібло", Weight = 1.5, Price = 2300 });
+            store5.JewelryList.Add(new Jewelry { Name = "Каблучка", Metal = "Паладій", Weight = 2.0, Price = 5200 });
+            store5.JewelryList.Add(new Jewelry { Name = "Сережки", Metal = "Срібло", Weight = 2.6, Price = 1900 });
+
+            db.Stores.AddRange(store1, store2, store3, store4, store5);
             db.SaveChanges();
 
         }
