@@ -1,0 +1,475 @@
+﻿@page "/jewerly"
+@rendermode InteractiveServer
+@inject JewelryStoreRepository Repository
+@using System.Globalization
+
+<style>
+    button {
+        background: linear-gradient(90deg, #6d5dfc 30%, #4fc3f7 100%);
+        color: #fff;
+        border: none;
+        border-radius: 10px;
+        padding: 10px 22px;
+        font-size: 1rem;
+        font-weight: 600;
+        margin: 8px 12px 18px 0;
+        box-shadow: 0 2px 8px #0001;
+        cursor: pointer;
+        transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+    }
+
+        button:hover, button:focus {
+            background: linear-gradient(90deg, #4fc3f7 0%, #6d5dfc 100%);
+            box-shadow: 0 4px 16px #4fc3f740;
+            transform: translateY(-2px) scale(1.03);
+            outline: none;
+        }
+
+    ul.result-list {
+        border: 2px solid #d2dbe7;
+        background: #f9fbfe;
+        border-radius: 14px;
+        padding: 16px 26px 16px 30px;
+        margin: 18px 0 26px 0;
+        box-shadow: 0 1px 10px #7fa6fa22;
+        font-size: 1.08em;
+        list-style: disc;
+        max-width: 550px;
+        min-width: 280px;
+        transition: box-shadow 0.15s;
+    }
+
+        ul.result-list li {
+            margin-bottom: 8px;
+            padding: 3px 0 3px 4px;
+            color: #2d3748;
+            border-left: 3px solid #a2b8ef22;
+            font-size: 1em;
+            background: #fffdfa;
+            border-radius: 5px;
+            box-shadow: 0 1px 4px #e4f1ff40;
+            transition: background 0.12s, border 0.12s;
+        }
+
+            ul.result-list li:last-child {
+                margin-bottom: 0;
+            }
+
+    .result-count {
+        font-weight: 600;
+        color: #5562a1;
+        margin-bottom: 10px;
+        margin-top: 3px;
+        font-size: 1.04em;
+        letter-spacing: 0.5px;
+    }
+    .stores-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    .store-card {
+        border: 2px solid #c6c6c6;
+        border-radius: 16px;
+        padding: 16px;
+        min-width: 320px;
+        max-width: 380px;
+        background: #f8fafd;
+        box-shadow: 0 2px 8px #0001;
+        margin-bottom: 16px;
+        flex: 1 0 320px;
+    }
+    .store-address {
+        font-weight: 700;
+        color: #4b446e;
+        margin-bottom: 6px;
+    }
+    .total-price {
+        font-size: 0.95em;
+        color: #668;
+        margin-bottom: 10px;
+    }
+    .jewelry-list {
+        padding-left: 1.2em;
+        margin: 0;
+    }
+    .jewelry-list li {
+        margin-bottom: 4px;
+        font-size: 0.97em;
+        color: #444;
+    }
+
+    .add-jewelry-form {
+        margin-top: 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        background: #f8fafd;
+        border-radius: 10px;
+        padding: 12px 8px;
+        box-shadow: 0 2px 8px #c7e3ff33;
+        max-width: 270px;
+    }
+
+        .add-jewelry-form input {
+            padding: 6px 10px;
+            border: 1.5px solid #e4e6ef;
+            border-radius: 7px;
+            font-size: 1em;
+            margin-bottom: 4px;
+            outline: none;
+            transition: border 0.13s;
+        }
+
+            .add-jewelry-form input:focus {
+                border: 1.5px solid #6d5dfc;
+                background: #f6faff;
+            }
+
+    .cancel-btn {
+        background: #e6e7ea;
+        color: #555;
+        border: none;
+        margin-top: 5px;
+        padding: 8px 18px;
+        border-radius: 8px;
+        box-shadow: none;
+        font-weight: 500;
+        transition: background 0.15s;
+    }
+
+        .cancel-btn:hover {
+            background: #d1d3da;
+        }
+
+    .add-jewelry-form label {
+        display: flex;
+        flex-direction: column;
+        font-weight: 500;
+        font-size: 1em;
+        color: #465;
+        margin-bottom: 7px;
+        gap: 2px;
+        letter-spacing: 0.01em;
+    }
+
+    .add-jewelry-form input {
+        padding: 6px 10px;
+        border: 1.5px solid #e4e6ef;
+        border-radius: 7px;
+        font-size: 1em;
+        outline: none;
+        margin-bottom: 0px;
+        transition: border 0.13s;
+    }
+
+        .add-jewelry-form input:focus {
+            border: 1.5px solid #6d5dfc;
+            background: #f6faff;
+        }
+
+
+    button.danger {
+        background: linear-gradient(90deg, #fc6767 30%, #fcb045 100%);
+        color: #fff;
+        border: none;
+        border-radius: 10px;
+        padding: 10px 22px;
+        font-size: 1rem;
+        font-weight: 700;
+        box-shadow: 0 2px 8px #fc676750;
+        margin-bottom: 18px;
+        transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+    }
+
+        button.danger:hover, button.danger:focus {
+            background: linear-gradient(90deg, #fcb045 0%, #fc6767 100%);
+            box-shadow: 0 4px 16px #fc676740;
+            transform: translateY(-2px) scale(1.04);
+            outline: none;
+        }
+
+
+
+</style>
+
+@code {
+    bool sortAscending = true;
+    private List<JewelryStore> stores;
+    private string newStoreAddress;
+
+    private List<Jewelry> sortedJewelryList;
+    private List<string> metalCount;
+
+    protected override void OnInitialized()
+    {
+        stores = Repository.ReadStores();
+        // ShowSortedJewelry();
+    }
+
+    static string GetCityName(string address, CultureInfo culture)
+    {
+        var city = address.Split(',')[0].Trim();
+        return city ?? "";
+    }
+
+    void ToggleSort()
+    {
+        sortAscending = !sortAscending;
+        StateHasChanged();
+    }
+
+    IEnumerable<JewelryStore> SortedStores =>
+        sortAscending
+            ? stores.OrderBy(s => GetCityName(s.Address, CultureInfo.CurrentCulture))
+            : stores.OrderByDescending(s => GetCityName(s.Address, CultureInfo.CurrentCulture));
+
+    void AddJewelry(JewelryStore store)
+    {
+        if (!string.IsNullOrWhiteSpace(store.NewJewelryName) &&
+            !string.IsNullOrWhiteSpace(store.NewJewelryMetal) &&
+            store.NewJewelryWeight > 0 &&
+            store.NewJewelryPrice > 0)
+        {
+            var newJewelry = new Jewelry
+            {
+                Name = store.NewJewelryName,
+                Metal = store.NewJewelryMetal,
+                Weight = store.NewJewelryWeight,
+                Price = store.NewJewelryPrice
+            };
+
+            Repository.AddJewelryToStore(store.Id, newJewelry);
+
+            stores = Repository.ReadStores();
+
+            store.NewJewelryName = "";
+            store.NewJewelryMetal = "";
+            store.NewJewelryWeight = 0;
+            store.NewJewelryPrice = 0;
+        }
+    }
+
+    void ToggleAddForm(JewelryStore store)
+    {
+        foreach (var s in stores)
+            s.ShowAddForm = false;
+        store.ShowAddForm = !store.ShowAddForm;
+    }
+
+    void CancelAddForm(JewelryStore store)
+    {
+        store.ShowAddForm = false;
+        store.NewJewelryName = "";
+        store.NewJewelryMetal = "";
+        store.NewJewelryWeight = 0;
+        store.NewJewelryPrice = 0;
+        StateHasChanged();
+    }
+
+
+
+
+    private string newStoreCity = "";
+    private string newStoreStreet = "";
+    private string newStoreNumber = "";
+
+    void AddStore()
+    {
+        if (!string.IsNullOrWhiteSpace(newStoreCity) &&
+            !string.IsNullOrWhiteSpace(newStoreStreet) &&
+            !string.IsNullOrWhiteSpace(newStoreNumber))
+        {
+            string address = $"{newStoreCity}, вул. {newStoreStreet}, {newStoreNumber}";
+            var newStore = new JewelryStore { Address = address };
+
+            Repository.AddStore(newStore);
+            stores = Repository.ReadStores();
+
+            newStoreCity = "";
+            newStoreStreet = "";
+            newStoreNumber = "";
+        }
+    }
+
+
+    private void ShowSortedJewelry()
+    {
+        sortedJewelryList = stores
+            .Where(s => s.TotalPrice <= 15000)
+            .SelectMany(s => s.JewelryList)
+            .OrderBy(j => j.Name)
+            .ToList();
+    }
+
+    private void WriteUniqueMetals()
+    {
+        metalCount = stores
+            .SelectMany(s => s.JewelryList)
+            .GroupBy(j => j.Metal)
+            .Select(g => $"{g.Key}: {g.Count()}")
+            .ToList();
+
+        // File.WriteAllLines(outputFile, metalCount);
+    }
+
+    void SerializeStoresToFile(string filePath)
+    {
+        var storesList = stores.Select(s => new
+        {
+            s.Address,
+            JewelryList = s.JewelryList.Select(j => new { j.Name, j.Metal, j.Weight, j.Price }).ToList()
+        }).ToList();
+
+        var json = System.Text.Json.JsonSerializer.Serialize(storesList, new System.Text.Json.JsonSerializerOptions
+        {
+            WriteIndented = true
+        });
+
+        File.WriteAllText(filePath, json);
+    }
+
+    void DeserializeStoresFromFile(string filePath)
+    {
+        if (File.Exists(filePath))
+        {
+            var json = File.ReadAllText(filePath);
+            var importedStores = System.Text.Json.JsonSerializer.Deserialize<List<JewelryStore>>(json);
+            if (importedStores != null)
+            {
+                foreach (var store in importedStores)
+                {
+                    Repository.AddStore(store);
+                }
+                stores = Repository.ReadStores();
+            }
+        }
+    }
+    void ClearDatabaseHandler()
+    {
+        Repository.ClearDatabase();
+        stores = Repository.ReadStores();
+    }
+
+    void RemoveDuplicatesHandler()
+    {
+        Repository.RemoveDuplicateStores();
+        stores = Repository.ReadStores();
+    }
+}
+
+<h3>Додати новий магазин: </h3>
+<div class="add-store-form">
+    <label>
+        Місто
+        <input placeholder="Місто" @bind="newStoreCity" />
+    </label>
+    <label>
+        Вулиця
+        <input placeholder="Вулиця" @bind="newStoreStreet" />
+    </label>
+    <label>
+        Номер будинку
+        <input placeholder="№" @bind="newStoreNumber" />
+    </label>
+    <button @onclick="AddStore" style="margin-top: 4px;">Додати магазин</button>
+</div>
+
+@if (SortedStores == null)
+{
+    <p>Дані не завантажено</p>
+}
+else
+{
+    <p class="result-count">Ювелірні магазинизи за адресою: </p>
+    <button @onclick="ToggleSort" style="margin-bottom: 18px;">
+        Сортувати по місту @(sortAscending ? "▲" : "▼")
+    </button>
+    <button @onclick="RemoveDuplicatesHandler" style="background:#f39c12; color:white; margin-bottom:16px;">
+        Видалити дублікати магазинів
+    </button>
+
+    <ul class="stores-list">
+        @foreach (var store in SortedStores)
+        {
+            <li class="store-card">
+                <div class="store-address"> @store.Address</div>
+                <div class="total-price">Сума виробів: <b>@store.TotalPrice.ToString("F2")</b> ₴</div>
+                <ul class="jewelry-list">
+                    @foreach (var jewel in store.JewelryList)
+                    {
+                        <li>@jewel.Name, @jewel.Metal, @jewel.Weight г, @jewel.Price ₴</li>
+                    }
+                </ul>
+                <hr />
+                @if (!store.ShowAddForm)
+                {
+                    <button @onclick="() => ToggleAddForm(store)">Додати нову прикрасу</button>
+                }
+                @if (store.ShowAddForm)
+                {
+                    <div class="add-jewelry-form">
+                        <label>
+                            Назва
+                            <input placeholder="Назва" @bind="store.NewJewelryName" />
+                        </label>
+                        <label>
+                            Метал
+                            <input placeholder="Метал" @bind="store.NewJewelryMetal" />
+                        </label>
+                        <label>
+                            Вага (г)
+                            <input type="number" step="0.01" placeholder="Вага" @bind="store.NewJewelryWeight" />
+                        </label>
+                        <label>
+                            Ціна (₴)
+                            <input type="number" step="0.01" placeholder="Ціна" @bind="store.NewJewelryPrice" />
+                        </label>
+                        <button @onclick="() => AddJewelry(store)">Додати</button>
+                        <button type="button" class="cancel-btn" @onclick="() => CancelAddForm(store)">Скасувати</button>
+                    </div>
+                }
+
+            </li>
+        }
+    </ul>
+
+}
+
+
+<button @onclick="ShowSortedJewelry">Показати посортовані прикраси</button>
+
+@if (sortedJewelryList != null)
+{
+    <p class="result-count">Знайдено виробів: @sortedJewelryList.Count</p>
+    <ul class="result-list">
+        @foreach (var item in sortedJewelryList)
+        {
+            <li>@item.Name, @item.Metal, @item.Weight г, @item.Price ₴</li>
+        }
+    </ul>
+}
+
+<button @onclick="WriteUniqueMetals">Показати унікальні прикраси</button>
+
+@if (metalCount != null)
+{
+    <p class="result-count">Знайдено виробів: @metalCount.Count</p>
+    <ul class="result-list">
+        @foreach (var item in metalCount)
+        {
+            <li>@item</li>
+        }
+    </ul>
+}
+
+<div>
+    <button @onclick="@(() => SerializeStoresToFile("stores_export.json"))">Експортувати в stores_export.json</button>
+    <button @onclick="@(() => DeserializeStoresFromFile("stores_export.json"))">Імпортувати з stores_export.json</button>
+</div>
+<div>
+    <button @onclick="ClearDatabaseHandler" class="danger">Очистити всі магазини</button>
+</div>

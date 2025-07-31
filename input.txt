@@ -1,0 +1,400 @@
+Store: вул. Лесі Українки 1
+Ring,Gold,10.2,1512
+Bracelet,Silver,8.1,1137
+Earrings,Platinum,4.5,1744
+Store: вул. Франка 2
+Necklace,Gold,14.3,2564
+Ring,Silver,7.8,822
+Brooch,Silver,6.5,531
+Store: вул. Кобзаря 3
+Pendant,Gold,5.1,975
+Ring,Gold,11.4,1572
+Bracelet,Silver,8.7,1400
+Store: вул. Бандери 4
+Ring,Platinum,10.6,2335
+Earrings,Silver,6.1,908
+Necklace,Gold,15.2,2752
+Store: вул. Володимира 5
+Brooch,Gold,6.8,900
+Ring,Gold,10.7,1456
+Earrings,Platinum,5.2,1810
+Store: вул. Грушевського 6
+Bracelet,Silver,8.9,1208
+Ring,Platinum,12.3,2201
+Necklace,Gold,14.8,2891
+Store: вул. Драгоманова 7
+Pendant,Gold,7.1,1297
+Brooch,Silver,6.4,504
+Earrings,Gold,5.8,995
+Store: вул. Богуна 8
+Necklace,Platinum,16.1,3051
+Bracelet,Silver,9.0,1348
+Ring,Gold,11.8,1598
+Store: вул. Пушкіна 9
+Ring,Silver,8.2,776
+Pendant,Gold,6.5,1178
+Earrings,Gold,5.6,1103
+Store: вул. Свободи 10
+Bracelet,Platinum,10.4,2027
+Necklace,Gold,15.7,3107
+Brooch,Silver,7.2,612
+Store: вул. Тичини 11
+Ring,Gold,12.5,1723
+Earrings,Silver,5.1,820
+Pendant,Platinum,7.7,1455
+Store: вул. Мазепи 12
+Ring,Gold,13.2,1856
+Necklace,Silver,10.2,1500
+Bracelet,Gold,9.4,1341
+Store: вул. Вишневого 13
+Earrings,Silver,6.5,700
+Brooch,Gold,5.9,928
+Pendant,Platinum,7.8,1562
+Store: вул. Симоненка 14
+Ring,Silver,9.2,920
+Bracelet,Platinum,10.5,2038
+Necklace,Gold,14.9,3124
+Store: вул. Стуса 15
+Brooch,Gold,7.0,1028
+Ring,Gold,11.5,1604
+Earrings,Platinum,5.6,1711
+Store: вул. Сагайдачного 16
+Bracelet,Silver,8.8,1197
+Necklace,Gold,15.3,2784
+Pendant,Silver,6.7,890
+Store: вул. Котляревського 17
+Ring,Gold,12.1,1687
+Earrings,Silver,5.5,876
+Brooch,Gold,7.4,1150
+Store: вул. Липинського 18
+Necklace,Silver,11.3,1672
+Ring,Platinum,12.5,2358
+Pendant,Gold,5.3,942
+Store: вул. Хмельницького 19
+Bracelet,Gold,9.1,1240
+Earrings,Silver,6.0,770
+Brooch,Platinum,8.9,1845
+Store: вул. Сковороди 20
+Ring,Gold,10.9,1551
+Pendant,Silver,6.2,846
+Earrings,Gold,5.8,1150
+Store: вул. Крушельницької 21
+Necklace,Gold,13.8,2680
+Brooch,Silver,7.0,660
+Ring,Silver,8.6,860
+Store: вул. Руданського 22
+Bracelet,Silver,8.3,1220
+Pendant,Gold,5.7,1013
+Earrings,Platinum,4.8,1589
+Store: вул. Олеся 23
+Ring,Gold,10.3,1500
+Necklace,Silver,12.2,1801
+Brooch,Silver,7.7,800
+Store: вул. Чернишевського 24
+Bracelet,Platinum,10.2,2050
+Pendant,Gold,5.8,995
+Earrings,Silver,6.9,900
+Store: вул. Стефаника 25
+Ring,Silver,8.5,803
+Brooch,Gold,7.2,1117
+Necklace,Platinum,14.1,2600
+Store: вул. Вербицького 26
+Earrings,Gold,6.4,1095
+Bracelet,Silver,9.0,1352
+Pendant,Gold,5.9,997
+Store: вул. Франка 27
+Ring,Gold,11.1,1597
+Brooch,Silver,7.1,607
+Earrings,Platinum,5.7,1690
+Store: вул. Глінки 28
+Necklace,Gold,15.2,2980
+Bracelet,Silver,8.5,1287
+Pendant,Silver,6.0,840
+Store: вул. Лук'янова 29
+Ring,Silver,8.9,900
+Brooch,Gold,6.5,950
+Earrings,Silver,6.2,807
+Store: вул. Довженка 30
+Bracelet,Platinum,10.7,2098
+Necklace,Gold,13.5,2765
+Ring,Gold,10.4,1473
+Store: вул. Калнишевського 31
+Pendant,Gold,5.7,1000
+Brooch,Silver,6.6,650
+Ring,Platinum,11.8,2208
+Store: вул. Павлова 32
+Earrings,Gold,5.5,990
+Bracelet,Silver,9.2,1378
+Necklace,Silver,11.1,1678
+Store: вул. Чайковського 33
+Ring,Gold,12.8,1750
+Brooch,Platinum,8.7,1820
+Pendant,Silver,7.0,900
+Store: вул. Лермонтова 34
+Bracelet,Gold,9.9,1359
+Ring,Silver,9.4,940
+Necklace,Platinum,15.3,2879
+Store: вул. Карпенка 35
+Brooch,Gold,7.3,1050
+Earrings,Silver,6.6,850
+Pendant,Gold,5.6,980
+Store: вул. Шота Руставелі 36
+Ring,Gold,13.3,1862
+Bracelet,Platinum,11.0,2110
+Necklace,Silver,13.7,1990
+Store: вул. Бойчука 37
+Pendant,Silver,6.8,910
+Ring,Gold,12.2,1700
+Brooch,Silver,7.5,700
+Store: вул. Короленка 38
+Earrings,Platinum,5.3,1510
+Bracelet,Gold,8.7,1295
+Necklace,Silver,10.9,1643
+Store: вул. Пирогова 39
+Ring,Silver,9.0,970
+Brooch,Gold,8.1,1155
+Pendant,Silver,7.2,925
+Store: вул. Морозова 40
+Bracelet,Platinum,11.2,2188
+Necklace,Gold,14.6,2998
+Earrings,Silver,7.0,840
+Store: вул. Садова 41
+Ring,Gold,12.9,1780
+Brooch,Silver,7.3,690
+Necklace,Platinum,15.1,2840
+Store: вул. Козаченка 42
+Bracelet,Silver,9.1,1364
+Earrings,Gold,5.7,970
+Ring,Platinum,13.1,2423
+Store: вул. Коцюбинського 43
+Brooch,Gold,7.6,1090
+Pendant,Silver,6.4,860
+Necklace,Gold,14.0,2850
+Store: вул. Куліша 44
+Earrings,Platinum,5.9,1622
+Bracelet,Silver,8.6,1246
+Ring,Gold,11.6,1630
+Store: вул. Симиренка 45
+Brooch,Silver,7.8,742
+Pendant,Gold,6.2,1101
+Necklace,Silver,11.9,1705
+Store: вул. Троїцька 46
+Bracelet,Platinum,10.1,2012
+Earrings,Gold,6.0,1159
+Ring,Silver,8.3,830
+Store: вул. Блакитного 47
+Brooch,Gold,8.2,1231
+Necklace,Platinum,14.7,2715
+Ring,Gold,11.0,1568
+Store: вул. Гаврилюка 48
+Pendant,Silver,6.5,860
+Bracelet,Silver,8.4,1275
+Earrings,Gold,5.9,990
+Store: вул. Івана Павла II 49
+Ring,Gold,12.7,1730
+Brooch,Silver,7.6,700
+Bracelet,Gold,8.9,1284
+Store: вул. Шевченка 50
+Necklace,Platinum,16.0,3120
+Pendant,Gold,5.8,1021
+Earrings,Silver,6.7,810
+Store: вул. Гоголя 51
+Ring,Silver,8.7,870
+Brooch,Gold,6.3,980
+Necklace,Silver,11.7,1690
+Store: вул. Шевченка 52
+Bracelet,Gold,9.7,1395
+Pendant,Silver,7.3,920
+Ring,Platinum,12.4,2390
+Store: вул. Січових Стрільців 53
+Brooch,Silver,7.4,675
+Necklace,Gold,15.8,3160
+Earrings,Platinum,6.1,1850
+Store: вул. Глібова 54
+Bracelet,Silver,9.3,1381
+Pendant,Gold,5.4,989
+Ring,Gold,10.8,1489
+Store: вул. Мельника 55
+Necklace,Silver,12.0,1754
+Earrings,Gold,6.2,1033
+Bracelet,Platinum,10.9,2156
+Store: вул. Ярослава Мудрого 56
+Brooch,Gold,7.9,1175
+Ring,Silver,9.6,960
+Pendant,Silver,6.3,870
+Store: вул. Івана Франка 57
+Bracelet,Silver,8.7,1292
+Earrings,Gold,6.7,1082
+Ring,Platinum,13.0,2411
+Store: вул. Митрополита Андрея 58
+Pendant,Gold,5.5,950
+Brooch,Silver,6.8,740
+Necklace,Silver,11.8,1725
+Store: вул. Гайдара 59
+Ring,Gold,13.5,1881
+Earrings,Platinum,6.2,1877
+Bracelet,Gold,8.5,1335
+Store: вул. Декабристів 60
+Brooch,Silver,7.2,601
+Pendant,Gold,5.6,1005
+Necklace,Gold,14.7,2985
+Store: вул. Грінченка 61
+Earrings,Silver,5.8,802
+Ring,Gold,11.9,1633
+Bracelet,Silver,8.6,1286
+Store: вул. Щепкіна 62
+Pendant,Silver,7.5,900
+Necklace,Gold,13.9,2695
+Ring,Silver,9.8,995
+Store: вул. Філатова 63
+Brooch,Platinum,8.4,1744
+Bracelet,Silver,8.5,1281
+Earrings,Gold,6.1,1041
+Store: вул. Нахімова 64
+Ring,Gold,12.4,1715
+Necklace,Silver,12.1,1782
+Bracelet,Gold,9.3,1408
+Store: вул. Артема 65
+Earrings,Silver,5.4,800
+Brooch,Gold,6.2,965
+Pendant,Gold,5.7,999
+Store: вул. Черкаська 66
+Necklace,Platinum,15.0,2900
+Bracelet,Silver,9.4,1400
+Ring,Gold,11.7,1625
+Store: вул. Ганни Барвінок 67
+Earrings,Gold,5.8,1000
+Pendant,Silver,7.1,850
+Brooch,Silver,7.7,810
+Store: вул. Ковалевської 68
+Ring,Platinum,13.2,2441
+Bracelet,Gold,9.8,1460
+Necklace,Silver,13.3,2000
+Store: вул. Деснянська 69
+Brooch,Gold,7.1,1020
+Earrings,Silver,6.0,790
+Ring,Gold,10.9,1540
+Store: вул. Макаренка 70
+Pendant,Silver,6.6,875
+Necklace,Gold,14.4,2780
+Bracelet,Platinum,10.6,2115
+Store: вул. Комарова 71
+Earrings,Gold,6.3,1055
+Brooch,Silver,8.2,750
+Ring,Silver,9.5,940
+Store: вул. Березова 72
+Necklace,Silver,12.8,1830
+Pendant,Gold,5.7,988
+Bracelet,Silver,8.7,1322
+Store: вул. Широка 73
+Earrings,Silver,5.9,805
+Ring,Gold,11.3,1650
+Brooch,Gold,8.3,1247
+Store: вул. Бульварна 74
+Pendant,Platinum,8.5,1687
+Bracelet,Gold,9.5,1411
+Necklace,Silver,11.6,1684
+Store: вул. Медова 75
+Ring,Gold,12.6,1771
+Brooch,Silver,7.0,690
+Earrings,Platinum,6.1,1840
+Store: вул. Ломоносова 76
+Necklace,Silver,10.7,1608
+Bracelet,Gold,9.6,1422
+Pendant,Gold,5.9,1010
+Store: вул. Світла 77
+Ring,Silver,8.4,850
+Brooch,Gold,7.7,1130
+Necklace,Platinum,15.4,2905
+Store: вул. Озерна 78
+Earrings,Gold,5.9,1011
+Bracelet,Silver,8.8,1257
+Ring,Gold,13.1,1877
+Store: вул. Відрадна 79
+Necklace,Gold,14.6,2920
+Pendant,Silver,7.2,910
+Earrings,Platinum,5.5,1701
+Store: вул. Південна 80
+Bracelet,Silver,9.3,1392
+Brooch,Gold,7.8,1157
+Necklace,Silver,11.9,1709
+Store: вул. Таращанська 81
+Ring,Platinum,12.3,2371
+Earrings,Silver,5.6,810
+Bracelet,Gold,8.8,1327
+Store: вул. Харківська 82
+Brooch,Silver,7.9,820
+Ring,Gold,11.7,1602
+Necklace,Silver,12.6,1802
+Store: вул. Кропивницького 83
+Earrings,Platinum,5.7,1644
+Bracelet,Gold,9.7,1451
+Pendant,Silver,6.8,895
+Store: вул. Братська 84
+Ring,Gold,13.4,1902
+Brooch,Silver,7.0,658
+Earrings,Silver,6.3,815
+Store: вул. Лугова 85
+Pendant,Gold,5.5,972
+Necklace,Platinum,16.2,3150
+Bracelet,Silver,8.4,1299
+Store: вул. Північна 86
+Brooch,Gold,8.1,1150
+Ring,Silver,9.8,999
+Earrings,Silver,5.4,808
+Store: вул. Яблунева 87
+Bracelet,Silver,8.6,1278
+Pendant,Gold,6.0,1032
+Necklace,Silver,11.4,1659
+Store: вул. Мостова 88
+Ring,Gold,12.2,1720
+Brooch,Silver,6.9,708
+Earrings,Gold,5.7,990
+Store: вул. Малинова 89
+Bracelet,Silver,8.7,1326
+Pendant,Platinum,7.9,1549
+Necklace,Gold,14.2,2798
+Store: вул. Бузкова 90
+Ring,Silver,8.1,798
+Brooch,Gold,6.4,967
+Earrings,Platinum,5.8,1766
+Store: вул. Соснова 91
+Bracelet,Silver,9.5,1420
+Pendant,Gold,6.3,1080
+Necklace,Platinum,15.7,2977
+Store: вул. Польова 92
+Ring,Gold,11.8,1632
+Brooch,Silver,7.7,798
+Earrings,Silver,6.5,810
+Store: вул. Княжий Затон 93
+Bracelet,Gold,9.9,1477
+Pendant,Silver,6.6,880
+Necklace,Gold,15.3,2950
+Store: вул. Осіння 94
+Earrings,Gold,6.3,1059
+Brooch,Silver,7.1,680
+Bracelet,Platinum,11.2,2169
+Store: вул. Гірська 95
+Pendant,Gold,5.7,995
+Necklace,Silver,13.1,2002
+Earrings,Silver,5.8,802
+Store: вул. Весняна 96
+Ring,Gold,12.5,1750
+Brooch,Silver,7.0,670
+Bracelet,Gold,9.1,1385
+Store: вул. Східна 97
+Pendant,Platinum,8.2,1620
+Ring,Silver,9.4,950
+Necklace,Gold,15.0,2990
+Store: вул. Запашна 98
+Bracelet,Silver,8.5,1309
+Earrings,Platinum,5.4,1497
+Ring,Gold,10.6,1490
+Store: вул. Гагаріна 99
+Brooch,Gold,7.5,1110
+Necklace,Platinum,14.5,2650
+Bracelet,Silver,9.0,1340
+Store: вул. Затишна 100
+Earrings,Gold,5.8,1011
+Pendant,Silver,6.2,870
+Ring,Silver,9.3,920

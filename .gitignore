@@ -1,0 +1,13 @@
+# .NET
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+jewelry.db
+*.json
+
+
+# VS Code
+.vscode/
